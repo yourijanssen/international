@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FiDownload } from 'react-icons/fi';
-import {Button} from "@/pages/components/ui/button";
+import {Button} from "@/components/ui/button";
 
 const CVUrl = '/assets/CV-Youri.pdf';
 
