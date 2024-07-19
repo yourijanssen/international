@@ -1,18 +1,14 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import {Inter, JetBrains_Mono} from "next/font/google";
 import {useRouter} from "next/router";
 import TypingAnimation from "@/components/TypingAnimation";
 import {CVDownload} from "@/components/Downloads";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
-import {getLastCommitDate} from "@/components/gitUtils";
-import * as fs from "node:fs";
-import * as path from "node:path";
 
-const inter = Inter({ subsets: ["latin"] });
 
-const Home = ({commitDate}) => {
+const Home = () => {
 const {locale, locales, push} = useRouter()
 
   return (
@@ -55,10 +51,10 @@ const {locale, locales, push} = useRouter()
                                   />
                               </div>
                           </div>
-                          <div className="container mx-auto xl:text-left">
-                              <p className="text-text-light dark:text-text-dark">Page last updated
-                                  on: {commitDate}</p>
-                          </div>
+                          {/*<div className="container mx-auto xl:text-left">*/}
+                          {/*    <p className="text-text-light dark:text-text-dark">Page last updated*/}
+                          {/*        on: {commitDate}</p>*/}
+                          {/*</div>*/}
                       </div>
                       {/* photo */}
                       <div className="order-1 xl:order-none mb-8 xl:mb-0">
@@ -72,11 +68,6 @@ const {locale, locales, push} = useRouter()
   );
 }
 
-export async function getServerSideProps() {
-    const filePath = path.join(process.cwd(), 'public/commit-date.json');
-    const commitDate = JSON.parse(fs.readFileSync(filePath, 'utf8')).commitDate || 'N/A';
-    return { props: { commitDate } };
-}
 
 
 
