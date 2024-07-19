@@ -7,7 +7,7 @@ import PageTransition from "@/components/PageTransition";
 import {DarkModeProvider} from "@/context/DarkModeContext";
 
 export default function App({Component, pageProps}) {
-
+//update to new vercel deployment
 	return (
 
 			<DarkModeProvider>
