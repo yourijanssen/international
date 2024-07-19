@@ -7,15 +7,10 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import {getLastCommitDate} from "@/components/gitUtils";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 const inter = Inter({ subsets: ["latin"] });
-
-//check if git page can update
-
-export async function getServerSideProps() {
-    const commitDate = await getLastCommitDate();
-    return { props: { commitDate }};
-}
 
 const Home = ({commitDate}) => {
 const {locale, locales, push} = useRouter()
@@ -75,8 +70,14 @@ const {locale, locales, push} = useRouter()
           </section>
       </>
   );
-
 }
+
+export async function getServerSideProps() {
+    const filePath = path.join(process.cwd(), 'public/commit-date.json');
+    const commitDate = JSON.parse(fs.readFileSync(filePath, 'utf8')).commitDate || 'N/A';
+    return { props: { commitDate } };
+}
+
 
 
 export default Home
