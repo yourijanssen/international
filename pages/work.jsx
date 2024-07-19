@@ -1,18 +1,14 @@
-import {motion} from "framer-motion";
-import React, {useState} from "react";
-
-import {Swiper, SwiperSlide} from "swiper/react";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
-import {BsArrowUpRight, BsGithub} from "react-icons/bs";
-
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
@@ -29,7 +25,7 @@ const projects = [
 			" Modeling, is a process that involves generating and managing digital representations of the physical and" +
 			" functional characteristics of buildings and other physical assets. I developed a tool to make this process" +
 			" more accessible for the average customer of the product owner.",
-		stack: [{name: "Tailwind"}, {name: "Three"}, {name: "MongoDB"}],
+		stack: [{ name: "Tailwind" }, { name: "Three" }, { name: "MongoDB" }],
 		image: "/assets/work/bimBuilder.png",
 		live: "",
 		github: "",
@@ -43,7 +39,7 @@ const projects = [
 			" that tracks all errors occurring across all the instances of the application. This system allows the" +
 			" employees to have a real-time overview of the bugs and errors, enabling them to address issues consistently" +
 			" and effectively, ensuring customer satisfaction. ",
-		stack: [{name: "Spring MVC"}, {name: "React"}, {name: "MariaDB"}],
+		stack: [{ name: "Spring MVC" }, { name: "React" }, { name: "MariaDB" }],
 		image: "/assets/work/ticketSystem.png",
 		live: "",
 		github: "",
@@ -66,7 +62,7 @@ const Work = () => {
 
 	const handleSlideChange = (swiper) => {
 		// get current slide index
-		const currentIndex = swiper.activeIndex;
+		const currentIndex = swiper.realIndex;
 		// update project state based on current slide index
 		setProject(projects[currentIndex]);
 	};
@@ -77,17 +73,18 @@ const Work = () => {
 				<title>Youri Janssen | Work</title>
 			</Head>
 			<motion.section
-				initial={{opacity: 0}}
+				initial={{ opacity: 0 }}
 				animate={{
 					opacity: 1,
-					transition: {delay: 0.2, duration: 0.3, ease: "easeIn"},
+					transition: { delay: 0.2, duration: 0.3, ease: "easeIn" },
 				}}
 				className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
 			>
 				<div className="container mx-auto">
 					<div className="flex flex-col xl:flex-row xl:gap-[30px]">
 						<div
-							className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+							className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none"
+						>
 							<div className="flex flex-col gap-[30px] h-[50%]">
 								{/* outline num */}
 								<div className="text-5xl font-extrabold text-text-light dark:text-text-dark">
@@ -150,15 +147,14 @@ const Work = () => {
 								slidesPerView={1}
 								className="xl:h-[520px] mb-12"
 								onSlideChange={handleSlideChange}
+								loop={true}  // Enable loop for cyclic navigation
 							>
 								{projects.map((project, index) => {
 									return (
 										<SwiperSlide key={index} className="w-full">
-											<div
-												className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+											<div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
 												{/* overlay */}
-												<div
-													className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+												<div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
 												{/* image */}
 												<div className="relative w-full h-full">
 													<Image
