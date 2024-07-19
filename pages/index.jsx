@@ -10,6 +10,8 @@ import Stats from "@/components/Stats";
 
 const inter = Inter({ subsets: ["latin"] });
 
+//check if git page can update
+
 export async function getServerSideProps() {
     const commitDate = await getLastCommitDate();
     return { props: { commitDate }};
