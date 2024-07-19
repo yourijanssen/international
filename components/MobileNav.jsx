@@ -36,7 +36,7 @@ const MobileNav = () => {
   const closeSheet = () => {
     setTimeout(() => {
       setIsOpen(false);
-    }, 500);
+    }, 100);
   };
 
   return (
