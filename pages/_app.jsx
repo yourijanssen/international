@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 export default function App({ Component, pageProps }) {
   return (
       <div className={jetbrainsMono.variable}>
-          <Header/>
           <StairTransition/>
           <PageTransition>
+              <Header/>
         <Component {...pageProps} />
           </PageTransition>
         <Analytics />
