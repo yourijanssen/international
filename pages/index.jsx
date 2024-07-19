@@ -6,7 +6,10 @@ import Stats from "@/components/Stats";
 import {Commit} from '@/components/Commit';
 import { motion } from "framer-motion";
 import Head from "next/head";
-
+import Resume from "@/pages/resume";
+import Services from "@/pages/services";
+import Work from "@/pages/work";
+import Contact from "@/pages/contact";
 
 const Home = () => {
 	const {locale, locales, push} = useRouter();
@@ -79,6 +82,10 @@ const Home = () => {
 					</div>
 					<Stats/>
 				</section>
+				<Resume/>
+				<Work/>
+				<Services/>
+				<Contact className="text-center"/>
 			</motion.section>
 		</>
 	);
