@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import {useRouter} from "next/router";
-import TypingAnimation from "@/pages/components/TypingAnimation";
-import {CVDownload} from "@/pages/components/Downloads";
-import Social from "@/pages/components/Social";
-import Photo from "@/pages/components/Photo";
-import Stats from "@/pages/components/Stats";
 import {getLastCommitDate} from "@/pages/api/gitUtils";
+import TypingAnimation from "@/components/TypingAnimation";
+import {CVDownload} from "@/components/Downloads";
+import Social from "@/components/Social";
+import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const inter = Inter({ subsets: ["latin"] });
 
