@@ -1,23 +1,10 @@
-"use client";
-
-import { useEffect, useState } from 'react';
-import {BiMoon, BiSun} from "react-icons/bi";
+// components/DarkModeToggle.jsx
+import React from 'react';
+import { useDarkMode } from '@/context/DarkModeContext';
+import { BiMoon, BiSun } from 'react-icons/bi';
 
 const DarkModeToggle = () => {
-	const [isDarkMode, setIsDarkMode] = useState(true);
-
-	useEffect(() => {
-		const html = document.querySelector('html');
-		if (isDarkMode) {
-			html.classList.add('dark');
-		} else {
-			html.classList.remove('dark');
-		}
-	}, [isDarkMode]);
-
-	const toggleDarkMode = () => {
-		setIsDarkMode(!isDarkMode);
-	};
+	const { isDarkMode, toggleDarkMode } = useDarkMode();
 
 	return (
 		<button

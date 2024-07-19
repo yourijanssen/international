@@ -9,7 +9,7 @@ import {useState} from "react";
 const links = [
   {
     name: "home",
-    path: "/home",
+    path: "/",
   },
   {
     name: "services",
