@@ -1,28 +1,14 @@
-"use client"
 
-import Image from "next/image";
-import {Inter, JetBrains_Mono} from "next/font/google";
 import {useRouter} from "next/router";
-import TypingAnimation from "@/components/TypingAnimation";
 import {CVDownload} from "@/components/Downloads";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
-import {useEffect, useState} from "react";
+import {Commit} from '@/components/Commit';
 
 
 const Home = () => {
 	const {locale, locales, push} = useRouter();
-	const [isTransitionComplete, setIsTransitionComplete] = useState(false);
-
-	useEffect(() => {
-		// Mock transition completion delay
-		const timeoutId = setTimeout(() => {
-			setIsTransitionComplete(true);
-		}, 1000); // Adjust delay as needed for your transition
-
-		return () => clearTimeout(timeoutId);
-	}, []);
 
 	return (
 		<>
@@ -63,6 +49,7 @@ const Home = () => {
 									/>
 								</div>
 							</div>
+							<Commit/>
 							{/*<div className="container mx-auto xl:text-left">*/}
 							{/*    <p className="text-text-light dark:text-text-dark">Page last updated*/}
 							{/*        on: {commitDate}</p>*/}
