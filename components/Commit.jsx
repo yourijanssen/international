@@ -5,7 +5,7 @@ export const Commit = () => {
 
 	useEffect(() => {
 		const fetchCommitDate = async () => {
-			const response = await fetch('/api/commit-date');
+			const response = await fetch('/commit-date.json');
 			const data = await response.json();
 			setCommitDate(data.commitDate);
 		};

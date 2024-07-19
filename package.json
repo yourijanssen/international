@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/write-commit-date.js",
-    "build": "next build",
+    "build": "npm run write-commit-date && next build",
+    "write-commit-date": "node scripts/write-commit-date.js",
     "start": "next start",
     "lint": "next lint"
   },
