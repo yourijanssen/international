@@ -1,16 +1,10 @@
-// context/DarkModeContext.jsx
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const DarkModeContext = createContext();
 
 export const DarkModeProvider = ({ children }) => {
-	const [isDarkMode, setIsDarkMode] = useState(() => {
-		// Check localStorage for saved theme preference
-		if (typeof window !== 'undefined') {
-			return JSON.parse(localStorage.getItem('isDarkMode')) || true;
-		}
-		return true;
-	});
+	const [isDarkMode, setIsDarkMode] = useState(false);
+
 
 	useEffect(() => {
 		const html = document.querySelector('html');

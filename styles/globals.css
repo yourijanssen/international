@@ -46,17 +46,6 @@
     -webkit-text-stroke: 1px #29B6F6;
   }
 }
-
-@layer utilities {
-  .bg-primary {
-    background-color: var(--color-primary);
-  }
-
-  .text-primary {
-    color: var(--color-text);
-  }
-}
-
 @layer utilities {
   .bg-primary {
     background-color: var(--color-primary);
