@@ -5,7 +5,7 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import {Commit} from '@/components/Commit';
 import { motion } from "framer-motion";
-import Head from "next/Head";
+import Head from "next/head";
 
 
 const Home = () => {
