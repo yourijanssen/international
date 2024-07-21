@@ -6,10 +6,11 @@ import Stats from "@/components/Stats";
 import {Commit} from '@/components/Commit';
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Resume from "@/pages/resume";
-import Services from "@/pages/services";
-import Work from "@/pages/work";
-import Contact from "@/pages/contact";
+import {useTranslation} from 'next-i18next';
+import ResumePage from "@/components/pageComponents/ResumePage";
+import ServicesPage from "@/components/pageComponents/ServicesPage";
+import ContactPage from "@/components/pageComponents/ContactPage";
+import WorkPage from "@/components/pageComponents/WorkPage";
 
 const Home = () => {
 	const {locale, locales, push} = useRouter();
@@ -82,10 +83,10 @@ const Home = () => {
 					</div>
 					<Stats/>
 				</section>
-				<Resume/>
-				<Work/>
-				<Services/>
-				<Contact className="text-center"/>
+				<ResumePage/>
+				<WorkPage/>
+				<ServicesPage/>
+				<ContactPage/>
 			</motion.section>
 		</>
 	);
