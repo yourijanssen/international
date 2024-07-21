@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react";
+import {useTranslation} from "next-i18next";
 
 export const Commit = () => {
 	const [commitDate, setCommitDate] = useState('');
+	const {t} = useTranslation('common');
+
 
 	useEffect(() => {
 		const fetchCommitDate = async () => {
@@ -16,7 +19,8 @@ export const Commit = () => {
 	return (
 		<>
 			<div className="container mx-auto xl:text-left">
-				<p className="text-text-light dark:text-text-dark">Page last updated on: {commitDate}</p>
+				<p className="text-text-light dark:text-text-dark">
+					{t('commit')} {commitDate}</p>
 			</div>
 		</>
 	)

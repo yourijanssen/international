@@ -1,12 +1,11 @@
 import Link from "next/link";
 import {Button} from "./ui/button";
-
-// components
-
 import MobileNav from "./MobileNav";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import Nav from "@/components/Nav";
 import { motion } from "framer-motion";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+
 
 const Header = () => {
 	return (
@@ -27,6 +26,7 @@ const Header = () => {
 						</h1>
 					</Link>
 					<DarkModeToggle/>
+					<LocaleSwitcher/>
 					{/* desktop nav & hire me button */}
 					<div className="hidden xl:flex items-center gap-8">
 						<Nav/>
@@ -44,5 +44,7 @@ const Header = () => {
 		</motion.section>
 	);
 };
+
+
 
 export default Header;

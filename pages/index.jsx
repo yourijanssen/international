@@ -1,4 +1,3 @@
-import {useRouter} from "next/router";
 import {CVDownload} from "@/components/Downloads";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
@@ -11,31 +10,16 @@ import ResumePage from "@/components/pageComponents/ResumePage";
 import ServicesPage from "@/components/pageComponents/ServicesPage";
 import ContactPage from "@/components/pageComponents/ContactPage";
 import WorkPage from "@/components/pageComponents/WorkPage";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 const Home = () => {
-	const {locale, locales, push} = useRouter();
+	const {t} = useTranslation('common');
 
 	return (
 		<>
-
 			<Head>
 				<title>Youri Janssen</title>
 			</Head>
-			{/*<h1>{locale}</h1>*/}
-
-			{/*<div>*/}
-			{/*<h3>with link</h3>*/}
-			{/*    <h1>choose your language</h1>*/}
-			{/*    {locales.map(l => (*/}
-			{/*        <h4 key={l}>*/}
-			{/*            <Link href={`/`} locale={l}>*/}
-			{/*                {l}*/}
-			{/*            </Link>*/}
-			{/*        </h4>*/}
-			{/*    ))}*/}
-			{/*</div>*/}
-			{/*    <Footer/>*/}
-
 			<motion.section
 				initial={{opacity: 0}}
 				animate={{
@@ -44,20 +28,20 @@ const Home = () => {
 				}}
 				className="py-6"
 			>
+
 				<section className="h-full">
 					<div className="container mx-auto h-full">
 						<div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
 							{/* text */}
 							<div className="text-center xl:text-left order-2 xl:order-none">
-								<span
-									className="text-xl text-text-light dark:text-text-dark">Full-stack developer</span>
+                <span className="text-xl text-text-light dark:text-text-dark">
+                  {t('fullStackDeveloper')}
+                </span>
 								<h1 className="h1 mb-6 text-text-light dark:text-text-dark">
-									Hello I'm <br/> <span className="text-accent">Youri Janssen</span>
+									{t('hello')} <br/> <span className="text-accent">Youri Janssen</span>
 								</h1>
 								<p className="max-w-[500px] mb-9 text-text-light dark:text-text-dark">
-									Welcome to my portfolio page! Here you'll find information about me and my projects.
-									If you have any questions or would like to get in touch, please visit the contact
-									page.
+									{t('welcome')}
 								</p>
 								{/* btn and socials */}
 								<div className="flex flex-col xl:flex-row items-center gap-8">
@@ -70,10 +54,6 @@ const Home = () => {
 									</div>
 								</div>
 								<Commit/>
-								{/*<div className="container mx-auto xl:text-left">*/}
-								{/*    <p className="text-text-light dark:text-text-dark">Page last updated*/}
-								{/*        on: {commitDate}</p>*/}
-								{/*</div>*/}
 							</div>
 							{/* photo */}
 							<div className="order-1 xl:order-none mb-8 xl:mb-0">
@@ -90,7 +70,18 @@ const Home = () => {
 			</motion.section>
 		</>
 	);
-}
+};
 
+export const getServerSideProps = async (context) => {
+	console.log('Context:', context); // Check if `locale` is present
+
+	const locale = context.locale; // Default to 'en' if locale is not available
+
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	};
+};
 
 export default Home
