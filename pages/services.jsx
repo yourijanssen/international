@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 import ServicesPage from "@/pages/pageComponents/ServicesPage";
-import {useTranslation} from "next-i18next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export const getServerSideProps = async (context) => {
@@ -14,15 +13,14 @@ export const getServerSideProps = async (context) => {
 	};
 };
 
-const Services = () => {
-	const {t} = useTranslation('common');
+const Services = (...props) => {
 
 	return (
 		<>
 			<Head>
 				<title>Youri Janssen | Services</title>
 			</Head>
-			<ServicesPage t={t} />
+			<ServicesPage {...props} />
 		</>
 	);
 };

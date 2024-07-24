@@ -32,8 +32,11 @@ const info = [
 ];
 
 import {motion} from "framer-motion";
+import {useTranslation} from "next-i18next";
 
 const ContactPage = ({t}) => {
+	const {t: translate} = useTranslation('common');
+
 
 	return (
 		<>
@@ -98,8 +101,8 @@ const ContactPage = ({t}) => {
 												<div className="text-[28px] dark:-[#232329] ">{item.icon}</div>
 											</div>
 											<div className="flex-1">
-												<p className="text-text-light dark:text-text-dark">{t(item.title)}</p>
-												<h3 className="text-xl text-text-light dark:text-text-dark">{t(item.description)}</h3>
+												<p className="text-text-light dark:text-text-dark">{translate(item.title)}</p>
+												<h3 className="text-xl text-text-light dark:text-text-dark">{translate(item.description)}</h3>
 											</div>
 										</li>
 									);

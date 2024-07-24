@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {motion} from "framer-motion";
+import React, {useState} from "react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import {BsArrowUpRight, BsGithub} from "react-icons/bs";
 import {
 	Tooltip,
 	TooltipContent,
@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import {useTranslation} from "next-i18next";
 
 const projects = [
 	{
@@ -21,7 +22,7 @@ const projects = [
 		icon: "",
 		description:
 			"bimdes",
-		stack: [{ name: "Tailwind" }, { name: "Three" }, { name: "MongoDB" }],
+		stack: [{name: "Tailwind"}, {name: "Three"}, {name: "MongoDB"}],
 		image: "/assets/work/bimBuilder.png",
 		live: "",
 		github: "",
@@ -35,7 +36,7 @@ const projects = [
 			" that tracks all errors occurring across all the instances of the application. This system allows the" +
 			" employees to have a real-time overview of the bugs and errors, enabling them to address issues consistently" +
 			" and effectively, ensuring customer satisfaction. ",
-		stack: [{ name: "Spring MVC" }, { name: "React" }, { name: "MariaDB" }],
+		stack: [{name: "Spring MVC"}, {name: "React"}, {name: "MariaDB"}],
 		image: "/assets/work/ticketSystem.png",
 		live: "",
 		github: "",
@@ -53,7 +54,10 @@ const projects = [
 	// },
 ];
 
-const Work = ({t}) => {
+
+	const Work = ({t}) => {
+	const {t: translate} = useTranslation('common');
+
 	const [project, setProject] = useState(projects[0]);
 
 	const handleSlideChange = (swiper) => {
@@ -66,10 +70,10 @@ const Work = ({t}) => {
 	return (
 		<>
 			<motion.section
-				initial={{ opacity: 0 }}
+				initial={{opacity: 0}}
 				animate={{
 					opacity: 1,
-					transition: { delay: 0.2, duration: 0.3, ease: "easeIn" },
+					transition: {delay: 0.2, duration: 0.3, ease: "easeIn"},
 				}}
 				className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
 			>
@@ -85,10 +89,10 @@ const Work = ({t}) => {
 								</div>
 								{/* project category */}
 								<h2 className="text-[42px] font-bold leading-none text-text-light dark:text-text-dark group-hover:text-accent transition-all duration-500 capitalize">
-									{t(project.category)}
+									{translate(project.category)}
 								</h2>
 								{/* project description */}
-								<p className="text-text-light/60 dark:text-text-dark/60">{t(project.description)}</p>
+								<p className="text-text-light/60 dark:text-text-dark/60">{translate(project.description)}</p>
 								{/* stack */}
 								<ul className="flex gap-3">
 									{project.stack.map((item, index) => {
@@ -145,9 +149,11 @@ const Work = ({t}) => {
 								{projects.map((project, index) => {
 									return (
 										<SwiperSlide key={index} className="w-full">
-											<div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+											<div
+												className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
 												{/* overlay */}
-												<div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+												<div
+													className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
 												{/* image */}
 												<div className="relative w-full h-full">
 													<Image

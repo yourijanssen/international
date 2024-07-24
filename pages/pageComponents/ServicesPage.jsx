@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import PropTypes from "prop-types";
+import {useTranslation} from "next-i18next";
 
 
 /**
@@ -36,6 +37,8 @@ const servicesPage = [
  * @returns {JSX.Element} Services component.
  */
 const ServicesPage = ({t}) => {
+	const {t: translate} = useTranslation('common');
+
 	return (
 		<>
 			<section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -68,12 +71,12 @@ const ServicesPage = ({t}) => {
 								</div>
 								{/* title */}
 								<h2 className="text-[42px] font-bold leading-none text-text-light dark:text-text-dark">
-									{t(service.titleKey)}
+									{translate(service.titleKey)}
 								</h2>
 								{/* description */}
 								<p
 									className="text-text-light/60 dark:text-text-dark/60"
-									dangerouslySetInnerHTML={{__html: t(service.descriptionKey)}}
+									dangerouslySetInnerHTML={{__html: translate(service.descriptionKey)}}
 								></p>
 								{/* border */}
 								<div className="border-b border-dark/80 dark:border-light/80 w-full"></div>
