@@ -45,22 +45,8 @@ import {
 
 // about data
 const about = {
-	title: "About me",
-	description:
-		"Hi! My name is Youri Janssen, and I am a full-stack developer currently finishing up" +
-		" my education at the Amsterdam University of" +
-		" Applied Sciences. Previously, I studied Arts & Economics at HKU, where I completed enrollment but" +
-		" ultimately decided my future lay elsewhere, specifically in programming. My interest in software" +
-		" development has always been there but I failed to recognise this at an early age. During my final" +
-		" graduation project at the HKU, I" +
-		" created" +
-		" a prototype" +
-		" website/webshop for a struggling soccer club alongside a comprehensive business plan. This project" +
-		" introduced me to the world of web development and I decided this was a field of work I'd be interested to" +
-		" work in for the long-term. This led me" +
-		" to enroll at HVA. Today, I" +
-		" consider myself a proficient programmer with a solid grasp of key concepts. I am always actively seeking" +
-		" opportunities in this field!",
+	title: "About",
+	description: "Aboutdes",
 	info: [
 		{
 			fieldName: "Name",
@@ -96,9 +82,9 @@ const about = {
 // experience data
 const experience = {
 	icon: "/assets/resume/badge.svg",
-	title: "My experience",
+	title: "experience",
 	description:
-		"Here is a list of all the relevant work experiences I've had so far:",
+		"experiencedes",
 	items: [
 		{
 			company: "Freelancer: Custom web pages",
@@ -117,23 +103,23 @@ const experience = {
 // education data
 const education = {
 	icon: "/assets/resume/cap.svg",
-	title: "My education",
+	title: "education",
 	description:
-		"Here is a list of all my official eduction degree's I've obtained so far:",
+		"educationdes",
 	items: [
 		{
-			institution: "Amsterdam University of Applied Sciences",
+			institution: "HVA",
 			degree: "Software Development - Associate Degree",
 			duration: "2022 - 2024",
 		},
 		{
-			institution: "Utrecht School of the Arts",
+			institution: "HKU",
 			degree: "Art & Economics - Bachelor of Arts",
 			duration: "2016 - 2021",
 			file: "/assets/HBO Bachelor Kunst en Economie (Art and Economics).pdf",
 		},
 		{
-			institution: "Utrecht School of the Arts",
+			institution: "HKU",
 			degree: "Art & Economics - Propaedeutic year",
 			duration: "2017",
 			file: "/assets/HBO Bachelor Kunst en Economie Propedeuse bachelor (Art and Economics).pdf",
@@ -158,9 +144,9 @@ const education = {
 // courses data
 const courses = {
 	icon: "/assets/resume/cap.svg",
-	title: "Favourite Courses",
+	title: "courses",
 	description:
-		"Here is a comprehensive list of courses that have significantly contributed to my learning over the years:",
+		"coursesdes",
 	items: [
 		{
 			icon: "/assets/resume/courses/nextjs.png",
@@ -265,11 +251,11 @@ const courses = {
 
 // skills data
 const skills = {
-	title: "My skills",
+	title: "skills",
 	description1:
-		"I've compared the most crucial developer skills I've worked with before alongside my honest opinion of my proficiency in each:",
+		"skillsdes",
 	description2:
-		"Here is a list of all skills I have acquired so far, categorized by each year:",
+		"skillsdes2",
 	year: "2022",
 	skillList: [
 		{
@@ -653,13 +639,13 @@ import {BsAndroid, BsWindows} from "react-icons/bs";
 import {PiMicrosoftTeamsLogo} from "react-icons/pi";
 import {BiTerminal} from "react-icons/bi";
 import Image from "next/image";
-
-import {useEffect, useState} from "react";
 import TypingAnimation from "@/components/TypingAnimation";
 import BarExample from "@/components/bar";
-import Head from "next/head";
+import {useTranslation} from "next-i18next";
 
-const ResumePage = () => {
+const ResumePage = ({t}) => {
+	const {t: translate} = useTranslation('common');
+
 	return (
 		<>
 			<motion.div
@@ -676,11 +662,11 @@ const ResumePage = () => {
 						className="flex flex-col xl:flex-row gap-[60px]"
 					>
 						<TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-							<TabsTrigger value="experience">Experience</TabsTrigger>
-							<TabsTrigger value="about">About me</TabsTrigger>
-							<TabsTrigger value="education">Education</TabsTrigger>
-							<TabsTrigger value="skills">Skills</TabsTrigger>
-							<TabsTrigger value="courses">Favourite courses</TabsTrigger>
+							<TabsTrigger value="experience">{translate("experienceTab")}</TabsTrigger>
+							<TabsTrigger value="about">{translate("aboutTab")}</TabsTrigger>
+							<TabsTrigger value="education">{translate("educationTab")}</TabsTrigger>
+							<TabsTrigger value="skills">{translate("skillsTab")}</TabsTrigger>
+							<TabsTrigger value="courses">{translate("coursesTab")}</TabsTrigger>
 						</TabsList>
 
 						{/* content */}
@@ -688,9 +674,9 @@ const ResumePage = () => {
 							{/* experience */}
 							<TabsContent value="experience" className="w-full">
 								<div className="flex flex-col gap-[30px] text-center xl:text-left">
-									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{experience.title}</h3>
+									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{translate(experience.title)}</h3>
 									<p className="max-w-[600px] text-text-light dark:text-text-dark mx-auto xl:mx-0">
-										{experience.description}
+										{translate(experience.description)}
 									</p>
 									<ScrollArea className="h-[400px]">
 										<ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
@@ -721,9 +707,9 @@ const ResumePage = () => {
 							{/* education */}
 							<TabsContent value="education" className="w-full">
 								<div className="flex flex-col gap-[30px] text-center xl:text-left">
-									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{education.title}</h3>
+									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{translate(education.title)}</h3>
 									<p className="max-w-[600px] text-text-light dark:text-text-dark mx-auto xl:mx-0">
-										{education.description}
+										{translate(education.description)}
 									</p>
 									<ScrollArea className="h-[400px]">
 										<ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
@@ -735,13 +721,13 @@ const ResumePage = () => {
 													>
 														<span className="text-accent">{item.duration}</span>
 														<h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left text-text-light/80 dark:text-text-dark">
-															{item.degree}
+															{translate(item.degree)}
 														</h3>
 														<div className="flex items-center gap-3">
 															{/* dot */}
 															<span
 																className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-															<p className="text-text-light/80 dark:text-text-dark/60">{item.institution}</p>
+															<p className="text-text-light/80 dark:text-text-dark/60">{translate(item.institution)}</p>
 														</div>
 														<div className="flex flex-col xl:flex-row items-center gap-8">
 															<DegreeDownload url={item.file}/>
@@ -757,9 +743,9 @@ const ResumePage = () => {
 							{/* Favourite Courses */}
 							<TabsContent value="courses" className="w-full">
 								<div className="flex flex-col gap-[30px] text-center xl:text-left">
-									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{courses.title}</h3>
+									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{translate(courses.title)}</h3>
 									<p className="max-w-[600px] text-text-light dark:text-text-dark mx-auto xl:mx-0">
-										{courses.description}
+										{translate(courses.description)}
 									</p>
 									<ScrollArea className="h-[400px]">
 										<ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
@@ -786,15 +772,15 @@ const ResumePage = () => {
 							<TabsContent value="skills" className="w-full h-full">
 								<div className="flex flex-col gap-[30px]">
 									<div className="flex flex-col gap-[30px] text-center xl:text-left">
-										<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{skills.title}</h3>
+										<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{translate(skills.title)}</h3>
 										<p className="max-w-[600px] text-text-light dark:text-text-dark mx-auto xl:mx-0">
-											{skills.description1}
+											{translate(skills.description1)}
 										</p>
 										<BarExample/>
 									</div>
 
 									<p className="max-w-[600px] text-text-light dark:text-text-dark mx-auto xl:mx-0">
-										{skills.description2}
+										{translate(skills.description2)}
 									</p>
 									{Object.keys(skillsByYear).sort((a, b) => b - a).map((year) => (
 										<div key={year} className="mb-8">
@@ -832,9 +818,9 @@ const ResumePage = () => {
 								className="w-full text-center xl:text-left"
 							>
 								<div className="flex flex-col gap-[30px]">
-									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{about.title}</h3>
+									<h3 className="text-4xl font-bold text-text-light dark:text-text-dark">{translate(about.title)}</h3>
 									{/* Typist component for animated description */}
-									<TypingAnimation text={about.description}/>
+									<TypingAnimation text={translate(about.description)}/>
 									<ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
 										{about.info.map((item, index) => {
 											return (

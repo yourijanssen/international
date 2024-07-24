@@ -29,13 +29,10 @@ const projects = [
 	},
 	{
 		num: "02 ",
-		category: "Support Ticket System",
+		category: "ticket",
 		title: "",
 		description:
-			"This was the first project I developed that is still actively used today. It consists of a ticketing system" +
-			" that tracks all errors occurring across all the instances of the application. This system allows the" +
-			" employees to have a real-time overview of the bugs and errors, enabling them to address issues consistently" +
-			" and effectively, ensuring customer satisfaction. ",
+			"ticketdes",
 		stack: [{name: "Spring MVC"}, {name: "React"}, {name: "MariaDB"}],
 		image: "/assets/work/ticketSystem.png",
 		live: "",

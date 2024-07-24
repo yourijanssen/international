@@ -24,9 +24,31 @@
 
   "bim": "BIM Salesviewer",
   "bimdes": "Dit was mijn afstudeerproject voor mijn tweejarige opleiding Softwareontwikkeling. BIM, of Bouwwerk Informatie Modellering, is een proces waarbij digitale representaties van de fysieke en functionele kenmerken van gebouwen en andere fysieke objecten worden gegenereerd en beheerd. Ik heb een tool ontwikkeld om dit proces toegankelijker te maken voor de gemiddelde klant van de producteigenaar.",
-
+  "ticket": "Ticketsysteem",
+  "ticketdes": "Dit was het eerste project dat ik heb ontwikkeld en dat nog steeds actief wordt gebruikt. Het bestaat uit een ticketsysteem dat alle fouten bijhoudt die zich voordoen in alle instanties van de applicatie. Dit systeem stelt de medewerkers in staat om in real-time een overzicht te hebben van de bugs en fouten, waardoor ze problemen consequent en effectief kunnen aanpakken en klanttevredenheid kunnen waarborgen.",
 
   "Phone": "Mobiel",
   "Email": "Email",
-  "Location": "Locatie"
+  "Location": "Locatie",
+
+  "HVA": "Hogeschool van Amsterdam",
+  "HKU": "Hogeschool voor de Kunsten Utrecht",
+
+  "skillsTab": "Vaardigheden",
+  "aboutTab": "Over mij",
+  "experienceTab": "Ervaring",
+  "coursesTab": "Cursussen",
+  "educationTab": "Onderwijs",
+
+  "About": "Over mij",
+  "Aboutdes": "Hoi! Mijn naam is Youri Janssen en ik ben een full-stack ontwikkelaar die momenteel mijn opleiding aan de Hogeschool van Amsterdam afrondt. Eerder heb ik Kunst & Economie gestudeerd aan de HKU, waar ik mijn inschrijving heb voltooid maar uiteindelijk besloot dat mijn toekomst ergens anders lag, namelijk in programmeren. Mijn interesse in softwareontwikkeling is er altijd geweest, maar ik herkende dit niet op jonge leeftijd. Tijdens mijn afstudeerproject aan de HKU heb ik een prototype website/webshop gemaakt voor een worstelende voetbalclub, samen met een uitgebreid businessplan. Dit project introduceerde me in de wereld van webontwikkeling en ik besloot dat dit een werkveld was waarin ik op de lange termijn geïnteresseerd zou zijn. Dit leidde ertoe dat ik me inschreef aan de HVA. Vandaag de dag beschouw ik mezelf als een vaardige programmeur met een goed begrip van de belangrijkste concepten. Ik ben altijd actief op zoek naar kansen in dit veld!",
+  "experience": "Mijn Ervaring",
+  "experiencedes": "Hier is een lijst van alle relevante werkervaringen die ik tot nu toe heb opgedaan:",
+  "education": "Mijn Onderwijs",
+  "educationdes": "Hier is een lijst van al mijn officiële diploma's die ik tot nu toe heb behaald:",
+  "skills": "Mijn vaardigheden",
+  "skillsdes": "Ik heb de belangrijkste ontwikkelaarsvaardigheden waarmee ik eerder heb gewerkt vergeleken met mijn eerlijke mening over mijn bekwaamheid in elk:",
+  "skillsdes2": "Hier is een lijst van alle vaardigheden die ik tot nu toe heb verworven, gecategoriseerd per jaar",
+  "courses": "Favoriete cursussen",
+  "coursesdes": "Hier is een uitgebreide lijst van cursussen die in de loop der jaren aanzienlijk hebben bijgedragen aan mijn leerproces:"
 }

@@ -23,9 +23,36 @@
   "interfacedes": "If you want a custom and unique design for your webpage, I am able to create this for you using Figma.",
 
   "bim": "BIM Salesviewer",
-  "bimdes": "This was my graduation project for my two-year Software Development program. BIM, or Building Information\" +\n\t\t\t\" Modeling, is a process that involves generating and managing digital representations of the physical and\" +\n\t\t\t\" functional characteristics of buildings and other physical assets. I developed a tool to make this process\" +\n\t\t\t\" more accessible for the average customer of the product owner.",
+  "bimdes": "This was my graduation project for my two-year Software Development program. BIM, or Building Information Modeling, is a process that involves generating and managing digital representations of the physical and functional characteristics of buildings and other physical assets. I developed a tool to make this process more accessible for the average customer of the product owner.",
+  "ticket": "Support Ticket System",
+  "ticketdes": "This was the first project I developed that is still actively used today. It consists of a ticketing system that tracks all errors occurring across all the instances of the application. This system allows the employees to have a real-time overview of the bugs and errors, enabling them to address issues consistently and effectively, ensuring customer satisfaction.",
 
   "Phone": "Phone",
   "Email": "Email",
-  "Location": "Location"
+  "Location": "Location",
+
+  "skillsTab": "Skills",
+  "aboutTab": "About me",
+  "experienceTab": "Experience",
+  "educationTab": "Education",
+  "coursesTab": "Courses",
+
+  "HVA": "Amsterdam University of Applied Sciences",
+  "HKU": "Utrecht School of the Arts",
+
+  "About": "About Me",
+  "Aboutdes": "Hi! My name is Youri Janssen, and I am a full-stack developer currently finishing up my education at the Amsterdam University of Applied Sciences. Previously, I studied Arts & Economics at HKU, where I completed enrollment but ultimately decided my future lay elsewhere, specifically in programming. My interest in software development has always been there but I failed to recognize this at an early age. During my final graduation project at the HKU, I created a prototype website/webshop for a struggling soccer club alongside a comprehensive business plan. This project introduced me to the world of web development and I decided this was a field of work I'd be interested to work in for the long-term. This led me to enroll at HVA. Today, I consider myself a proficient programmer with a solid grasp of key concepts. I am always actively seeking opportunities in this field!",
+  "experience": "My experience",
+  "experiencedes": "Here is a list of all the relevant work experiences I've had so far:",
+  "education": "My Education",
+  "educationdes": "Here is a list of all my official eduction degree's I've obtained so far:",
+  "skills": "My skills",
+  "skillsdes": "I've compared the most crucial developer skills I've worked with before alongside my honest opinion of my proficiency in each:",
+  "skillsdes2": "Here is a list of all skills I have acquired so far, categorized by each year:",
+  "courses": "Favourite Courses",
+  "coursesdes": "Here is a comprehensive list of courses that have significantly contributed to my learning over the years:"
+
+
+
+
 }
