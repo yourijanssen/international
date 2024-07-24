@@ -14,8 +14,8 @@ const LocaleSwitcher = () => {
 
 	return (
 		<select value={locale} onChange={handleChange} className="text-accent hover:text-blue-700 underline bg-transparent border-none">
-			<option value="en">en</option>
-			<option value="nl">nl</option>
+			<option value="en" className="text-accent hover:text-blue-700 underline bg-transparent border-none">en</option>
+			<option value="nl" className="text-accent hover:text-blue-700 underline bg-transparent border-none">nl</option>
 		</select>
 	);
 };

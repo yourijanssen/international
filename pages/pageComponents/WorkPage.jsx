@@ -16,14 +16,11 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
 	{
 		num: "01",
-		category: "BIM builder tool",
+		category: "bim",
 		title: "",
 		icon: "",
 		description:
-			"This was my graduation project for my two-year Software Development program. BIM, or Building Information" +
-			" Modeling, is a process that involves generating and managing digital representations of the physical and" +
-			" functional characteristics of buildings and other physical assets. I developed a tool to make this process" +
-			" more accessible for the average customer of the product owner.",
+			"bimdes",
 		stack: [{ name: "Tailwind" }, { name: "Three" }, { name: "MongoDB" }],
 		image: "/assets/work/bimBuilder.png",
 		live: "",
@@ -56,7 +53,7 @@ const projects = [
 	// },
 ];
 
-const Work = () => {
+const Work = ({t}) => {
 	const [project, setProject] = useState(projects[0]);
 
 	const handleSlideChange = (swiper) => {
@@ -88,10 +85,10 @@ const Work = () => {
 								</div>
 								{/* project category */}
 								<h2 className="text-[42px] font-bold leading-none text-text-light dark:text-text-dark group-hover:text-accent transition-all duration-500 capitalize">
-									{project.category}
+									{t(project.category)}
 								</h2>
 								{/* project description */}
-								<p className="text-text-light/60 dark:text-text-dark/60">{project.description}</p>
+								<p className="text-text-light/60 dark:text-text-dark/60">{t(project.description)}</p>
 								{/* stack */}
 								<ul className="flex gap-3">
 									{project.stack.map((item, index) => {

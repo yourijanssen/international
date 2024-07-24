@@ -1,10 +1,31 @@
 {
   "title": "Youri Janssen",
-  "fullStackDeveloper": "Full-stack developer",
+  "fullStack": "Full-stack developer",
   "hello": "Hello I'm",
   "welcome": "Welcome to my portfolio page! Here you'll find information about me and my projects. If you have any questions or would like to get in touch, please visit the contact page.",
+
   "commit": "Page last updated on:",
   "yearsOfExperience": "Years of experience",
   "projectsCompleted": "Projects completed",
-  "technologiesMastered": "Technologies mastered"
+  "technologiesMastered": "Technologies mastered",
+
+  "Hire": "Hire me",
+  "home": "home",
+  "services": "services",
+  "resume": "resume",
+  "work": "work",
+
+  "long": "Long-term employment",
+  "longdes": "Depending on my current employment situation I am available to join your team as a full-stack developer. Please check out my resume or contact me to determine weather I'd be suitable for the position you are trying to fill.",
+  "custom": "Custom Website Development",
+  "customdes": "I offer custom web page development services tailored to your needs. My services include:<br/><br/>\n    - Initial construction. Costs and maintenance are fees based on the complexity of the project.<br/>\n    - A domain name of your choice.<br/>\n    - An email service for customer inquiries via the contact page.<br/>\n    - Tools to track traffic and website performance.<br/>\n  - Building on top of exiting projects.<br/><br/>\n    Additionally, I will provide you with several design proposals so you can select the one that best suits your taste.",
+  "interface": "User Interface Design",
+  "interfacedes": "If you want a custom and unique design for your webpage, I am able to create this for you using Figma.",
+
+  "bim": "BIM Salesviewer",
+  "bimdes": "This was my graduation project for my two-year Software Development program. BIM, or Building Information\" +\n\t\t\t\" Modeling, is a process that involves generating and managing digital representations of the physical and\" +\n\t\t\t\" functional characteristics of buildings and other physical assets. I developed a tool to make this process\" +\n\t\t\t\" more accessible for the average customer of the product owner.",
+
+  "Phone": "Phone",
+  "Email": "Email",
+  "Location": "Location"
 }

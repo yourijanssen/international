@@ -2,31 +2,34 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {useTranslation} from "next-i18next";
 
 const links = [
   {
-    name: "home",
+    nameKey: "home",
     path: "/",
   },
   {
-    name: "services",
+    nameKey: "services",
     path: "/services",
   },
   {
-    name: "resume",
+    nameKey: "resume",
     path: "/resume",
   },
   {
-    name: "work",
+    nameKey: "work",
     path: "/work",
   },
   {
-    name: "contact",
+    nameKey: "contact",
     path: "/contact",
   },
 ];
 
 const Nav = () => {
+  const { t:tCommon } = useTranslation('common');
+
   const pathname = usePathname();
   return (
     <nav className="flex gap-8 text-text-light dark:text-text-dark">
@@ -39,7 +42,7 @@ const Nav = () => {
               link.path === pathname && "text-accent border-b-2 border-accent"
             } capitalize font-medium hover:text-accent transition-all`}
           >
-            {link.name}
+            {tCommon(link.nameKey)}
           </Link>
         );
       })}

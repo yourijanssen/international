@@ -5,9 +5,12 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import Nav from "@/components/Nav";
 import { motion } from "framer-motion";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
+import {useTranslation} from "next-i18next";
 
 
 const Header = () => {
+	const {t:tCommon} = useTranslation('common');
+
 	return (
 		<motion.section
 			initial={{opacity: 0}}
@@ -31,7 +34,7 @@ const Header = () => {
 					<div className="hidden xl:flex items-center gap-8">
 						<Nav/>
 						<Link href="/contact">
-							<Button>Hire me</Button>
+							<Button> {tCommon('Hire')}</Button>
 						</Link>
 					</div>
 

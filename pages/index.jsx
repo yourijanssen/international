@@ -6,11 +6,11 @@ import {Commit} from '@/components/Commit';
 import { motion } from "framer-motion";
 import Head from "next/head";
 import {useTranslation} from 'next-i18next';
-import ResumePage from "@/components/pageComponents/ResumePage";
-import ServicesPage from "@/components/pageComponents/ServicesPage";
-import ContactPage from "@/components/pageComponents/ContactPage";
-import WorkPage from "@/components/pageComponents/WorkPage";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import ContactPage from "@/pages/pageComponents/ContactPage";
+import ServicesPage from "@/pages/pageComponents/ServicesPage";
+import WorkPage from "@/pages/pageComponents/WorkPage";
+import ResumePage from "@/pages/pageComponents/ResumePage";
 
 const Home = () => {
 	const {t} = useTranslation('common');
@@ -35,7 +35,7 @@ const Home = () => {
 							{/* text */}
 							<div className="text-center xl:text-left order-2 xl:order-none">
                 <span className="text-xl text-text-light dark:text-text-dark">
-                  {t('fullStackDeveloper')}
+                  {t('fullStack')}
                 </span>
 								<h1 className="h1 mb-6 text-text-light dark:text-text-dark">
 									{t('hello')} <br/> <span className="text-accent">Youri Janssen</span>
@@ -63,10 +63,10 @@ const Home = () => {
 					</div>
 					<Stats/>
 				</section>
-				<ResumePage/>
-				<WorkPage/>
-				<ServicesPage/>
-				<ContactPage/>
+				<ResumePage t={t}/>
+				<WorkPage t={t}/>
+				<ServicesPage t={t}/>
+				<ContactPage t={t}/>
 			</motion.section>
 		</>
 	);

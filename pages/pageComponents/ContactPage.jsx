@@ -32,9 +32,8 @@ const info = [
 ];
 
 import {motion} from "framer-motion";
-import Head from "next/head";
 
-const ContactPage = () => {
+const ContactPage = ({t}) => {
 
 	return (
 		<>
@@ -99,8 +98,8 @@ const ContactPage = () => {
 												<div className="text-[28px] dark:-[#232329] ">{item.icon}</div>
 											</div>
 											<div className="flex-1">
-												<p className="text-text-light dark:text-text-dark">{item.title}</p>
-												<h3 className="text-xl text-text-light dark:text-text-dark">{item.description}</h3>
+												<p className="text-text-light dark:text-text-dark">{t(item.title)}</p>
+												<h3 className="text-xl text-text-light dark:text-text-dark">{t(item.description)}</h3>
 											</div>
 										</li>
 									);
