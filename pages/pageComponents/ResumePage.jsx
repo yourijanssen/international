@@ -111,6 +111,7 @@ const education = {
 			institution: "HVA",
 			degree: "Software Development - Associate Degree",
 			duration: "2022 - 2024",
+			file:"/assets/HBO Associate Degree Software Development - EN.pdf",
 		},
 		{
 			institution: "HKU",
